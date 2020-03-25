@@ -65,6 +65,12 @@ const Form = () => {
     get(getVersionUrl(currentValue, currentIsNpm))
   }
   
+  const keydownHandler = event => {
+    const isEnter = event.nativeEvent.key === 'Enter' || event.nativeEvent.keyCode === 13
+    if (!isEnter || disabled || loading) return
+    submit()
+  }
+  
   useEffect(() => {
     const { q: name, npm } = Router.query
     if (!name) return
@@ -86,11 +92,11 @@ const Form = () => {
       <Tabs {...bindings}>
         <Tabs.Item label={<><NpmIcon /><Spacer inline x={.3} /> Npm Package</>} value="npm">
           <Text type="secondary" className="tips">Enter the <Code>name</Code> of the NPM package to search. </Text>
-          <Input label="npmjs.com/package/" placeholder="package-name" {...NpmInputBindings} />
+          <Input label="npmjs.com/package/" placeholder="package-name" {...NpmInputBindings} onKeyPress={keydownHandler} />
         </Tabs.Item>
         <Tabs.Item label={<><GithubIcon /> Repository</>} value="gh">
           <Text type="secondary" className="tips">Enter the <Code>username/repository_name</Code> of the github to search. </Text>
-          <Input label="github.com/" placeholder="user/repo" {...GHInputBindings} />
+          <Input label="github.com/" placeholder="user/repo" {...GHInputBindings} onKeyPress={keydownHandler} />
         </Tabs.Item>
       </Tabs>
       <Spacer y={2} />
