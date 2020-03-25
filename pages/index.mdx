@@ -1,0 +1,16 @@
+import Layout from 'lib/layout'
+import { Card, Dot, Spacer, Code, Link } from '@zeit-ui/react'
+import PackageForm from 'lib/form'
+import PackageFiles from 'lib/files'
+
+### cdn.unix.bio
+
+<Dot type="success" /> Check <Code>packages</Code> & get CDN url.
+<Spacer y={.4} />
+<Dot /> <Link rel="nofollow" target="_blank" href="https://github.com/unix/easy-jsdelivr">Source code on GitHub</Link>
+<Spacer y={1.6} />
+<PackageForm />
+<Spacer y={2} />
+<PackageFiles />
+
+export default ({ children }) => <Layout>{children}</Layout>

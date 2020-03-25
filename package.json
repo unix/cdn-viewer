@@ -8,8 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit-ui/react": "^0.0.1-alpha.35",
     "next": "9.3.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "use-clipboard-copy": "^0.1.2",
+    "use-http": "^0.4.3"
+  },
+  "devDependencies": {
+    "@mapbox/rehype-prism": "^0.4.0",
+    "@mdx-js/loader": "^1.5.7",
+    "@next/mdx": "^9.3.1",
+    "rehype-join-line": "^1.0.2",
+    "styled-jsx": "^3.2.5"
   }
 }
