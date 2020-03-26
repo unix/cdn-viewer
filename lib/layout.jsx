@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     <FilesContext.Provider value={initialValue}>
       <HttpProvider url={api}>
         <main>
-          <Spacer y={3} />
+          <Spacer y={2.2} />
           {children}
           <Spacer y={2} />
       

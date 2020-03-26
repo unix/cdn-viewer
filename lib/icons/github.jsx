@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '@zeit-ui/react'
 
-const NpmIcon = () => {
+const GithubIcon = () => {
   const theme = useTheme()
   return (
     <>
@@ -36,4 +36,4 @@ const NpmIcon = () => {
   )
 }
 
-export default NpmIcon
+export default GithubIcon

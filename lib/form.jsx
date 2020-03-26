@@ -90,7 +90,7 @@ const Form = () => {
   return (
     <div className="form">
       <Tabs {...bindings}>
-        <Tabs.Item label={<><NpmIcon /><Spacer inline x={.3} /> Npm Package</>} value="npm">
+        <Tabs.Item label={<><NpmIcon /> Npm Package</>} value="npm">
           <Text type="secondary" className="tips">Enter the <Code>name</Code> of the NPM package to search. </Text>
           <Input label="npmjs.com/package/" placeholder="package-name" {...NpmInputBindings} onKeyPress={keydownHandler} />
         </Tabs.Item>
