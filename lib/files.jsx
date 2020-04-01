@@ -61,7 +61,7 @@ const Files = () => {
   const [_, setToast] = useToasts()
   const [selfInfo, setSelfInfo, infoRef] = useCurrentState()
   const [files, setFiles] = useState([])
-  const [currentVersion, setCurrentVersion] = useState('')
+  const [currentVersion, setCurrentVersion, versionRef] = useCurrentState('')
   const showVersions = useMemo(() => !!(info.name && info.versions.length), [info])
 
   const clickHandler = val => {
@@ -70,7 +70,7 @@ const Files = () => {
   }
 
   const fileClickHandler = filePath => {
-    const cdnPath = getCDNUrl(infoRef.current.path, filePath, currentVersion)
+    const cdnPath = getCDNUrl(infoRef.current.path, filePath, versionRef.current)
     copy(cdnPath)
     setToast({ text: `CDN url copied: ${cdnPath}` })
   }
