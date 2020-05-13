@@ -8,7 +8,7 @@ const Application = ({ Component, pageProps }) => {
   return (
     <>
     <Head>
-      <title>Viewer for CDN</title>
+      <title>Package viewer</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="dns-prefetch" href="//cdn.unix.bio" />
       <meta name="google" value="notranslate" />
